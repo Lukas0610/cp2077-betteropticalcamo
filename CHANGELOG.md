@@ -1,6 +1,12 @@
 Better Optical Camo
 -----
 
+### Version 2.0.0
+* Support for Patch 2.0
+* Adjusted available options to new Optical Camo-cyberware
+* Changed options to no longer require reloading last save
+* Added Combat-Cloak logic
+
 ### Version 1.2.2
 * Improved cloak toggling
 

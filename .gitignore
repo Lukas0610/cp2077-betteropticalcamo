@@ -1,10 +1,10 @@
 # CET files
-BetterOpticalCamo.log
-db.sqlite3
+/mod/BetterOpticalCamo.log
+/mod/db.sqlite3
 
 # Mod files
-settings.json
+/mod/settings.json
 
 # Build output
-build/
-BetterOpticalCamo.zip
+/build
+/BetterOpticalCamo.zip

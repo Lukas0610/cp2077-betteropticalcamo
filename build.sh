@@ -16,9 +16,9 @@ mkdir -pv "build/Compatibility Addons/"
 mkdir -pv "build/Compatibility Addons/Custom Quickslots/r6/scripts/BetterOpticalCamo/compat/"
 
 # copy files
-cp -vf {CHANGELOG,LICENSE,README}.md "build/"
-cp -rvf core/mod/* "build/Core Mod/bin/x64/plugins/cyber_engine_tweaks/mods/BetterOpticalCamo/"
-cp -rvf compat/custom_quickslots/redscript/* "build/Compatibility Addons/Custom Quickslots/r6/scripts/BetterOpticalCamo/compat"
+cp -v {CHANGELOG,LICENSE,README}.md "build/"
+cp -rv mod/* "build/Core Mod/bin/x64/plugins/cyber_engine_tweaks/mods/BetterOpticalCamo/"
+cp -rv compat/custom_quickslots/redscript/* "build/Compatibility Addons/Custom Quickslots/r6/scripts/BetterOpticalCamo/compat"
 
 # remove runtime files
 rm -vf \
