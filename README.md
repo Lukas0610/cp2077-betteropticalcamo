@@ -34,12 +34,12 @@ The settings can be found in the "Mods" menu entry under "Better Optical Camo"
 -----
 
 #### Translating
-Since 2.0.0, translating Better Optical Camo has been made easier than it was before using a dedicated translation-file, `i18n.lua`.
-To see which texts can be translated, take a look at `i18n-default.lua`, look for the strings to want to translate,
-copy those into `i18n.lua` and finally, translate the texts.
+Since 2.0.0, translating Better Optical Camo has been made easier than it was before using a dedicated translation-file, `i18n.json`.
+To see which texts can be translated, take a look at `i18n.default.json`, look for the strings to want to translate,
+copy those into `i18n.json` and finally, translate the texts.
 
-Better Optical Camo does not come with a `i18n.lua` by itself, so if you made a translation, you only need to distribute `i18n.lua`
-instead of the whole `init.lua`, which eases future updates for people who use translations.
+Better Optical Camo does not come with a `i18n.json` by itself, so if you made a translation, you only need to distribute `i18n.json`
+instead of the whole `init.lua`, which allows for easier updates when people use translations.
 
 -----
 

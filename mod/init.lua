@@ -48,11 +48,11 @@ registerForEvent("onInit", function()
     applyDefaultSettings()
 
     -- load the default translations
-    loadI18nFile("./i18n.default")
+    loadI18nFile("./i18n.default.json")
 
     -- load the custom translations
     -- overrides all default translations which the custom i18n-file defines
-    loadI18nFile("./i18n")
+    loadI18nFile("./i18n.json")
 
     -- load settings from file and write back the updated version
     loadSettingsFromFile()
@@ -581,11 +581,22 @@ end
 --------------------------------
 --- Localization
 --------------------------------
-function loadI18nFile(file)
-    if (file_exists(file)) then
-        local i18nFile = require(file)
-        for name, value in pairs(i18nFile) do
-            k_i18n[name] = value
+function loadI18nFile(filepath)
+    print_debug("loadI18nFile", "attempting to load translation file '"..filepath.."'")
+
+    local file = io.open(filepath, "r")
+    if file ~= nil then
+        print_debug("loadI18nFile", "loading translations from file '"..filepath.."'")
+
+        local contents = file:read("*a")
+        local validJson, loadedTranslations = pcall(function() return json.decode(contents) end)
+
+        file:close()
+
+        if validJson then
+            for key, value in pairs(loadedTranslations) do
+                k_i18n[key] = value
+            end
         end
     end
 end
